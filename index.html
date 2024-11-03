@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tell Me How You Feel Song</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        #mute-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="jumbotron">
+            <h1 class="display-4">Welcome to Tell Me How You Feel Song</h1>
+            <p class="lead">This site is dedicated to finding the source of a renowned song found on Instagram.</p>
+            <hr class="my-4">
+            <p>The song is considered lost media, and we are actively looking for any information about its origin.</p>
+            <a class="btn btn-primary btn-lg" href="https://discord.gg/sDJa4nxEWw" role="button" target="_blank">
+                <i class="fa-brands fa-discord"></i> Join Discord
+            </a>
+        </div>
+
+        <div class="mt-4">
+            <h2>Resources</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="https://www.instagram.com/p/CIHIGsEh-6-/" target="_blank">Instagram Post by ciger3t: how u feel ✴️
+                        (Likes: 381)</a>
+                    <p>This is the first instance of the song on the internet. The creator of the Instagram post is not willing
+                        to disclose the song's origin and has disabled comments.</p>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://soundcloud.com/xdmay/tell-me-how-you-feel?ref=clipboard&p=a&c=0&si=e3911d6e0fad40d886cdf1423b994480&utm_campaign=social_sharing&utm_medium=text&utm_source=clipboard"
+                        target="_blank">SoundCloud: ruby :) - tell me how you feel</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://www.youtube.com/watch?v=o0pCKhqmdyY&t=61s" target="_blank">YouTube: ghosted at least 11
+                        times (Lostwave) deloragami spotify previews</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://soundcloud.com/kirigrri/in-my-wallet?ref=clipboard&p=a&c=0&si=71eabacf49ea4c8f996f6ea11836a307&utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing"
+                        target="_blank">SoundCloud: m - tell me how you feel</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="https://vocaroo.com/18WCQfMvXH1c" target="_blank">Vocaroo: Online voice recorder</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <audio id="background-audio" autoplay>
+        <source src="tellmehowyoufeel.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    <button id="mute-button" class="btn btn-secondary">Mute</button>
+    
+    <script>
+        const audio = document.getElementById('background-audio');
+        const muteButton = document.getElementById('mute-button');
+
+        muteButton.addEventListener('click', () => {
+            if (audio.muted) {
+                audio.muted = false;
+                muteButton.textContent = 'Mute';
+            } else {
+                audio.muted = true;
+                muteButton.textContent = 'Unmute';
+            }
+        });
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
